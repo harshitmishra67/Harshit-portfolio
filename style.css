@@ -378,14 +378,94 @@ a:active {
 .fade-up { opacity: 0; transform: translateY(40px); transition: all 0.4s ease-out; }
 .fade-up.active { opacity: 1; transform: translateY(0); }
 
-/* RESPONSIVE */
+/* -- RESPONSIVE -- */
+@media (max-width: 1200px) {
+  .hero-title { font-size: clamp(60px, 8vw, 100px); }
+}
+
 @media (max-width: 992px) {
   .col-span-7, .col-span-5, .col-span-6 { grid-column: span 12; }
   .row-span-2 { grid-row: span 1; }
+  
+  .bento-card { padding: 24px; }
 }
+
 @media (max-width: 768px) {
-  .hero-title { font-size: 50px; }
-  .nav-links { display: none; }
-  .navbar { transform: rotate(-1deg); width: 95%; max-width: none; left: 10px; right: 10px; transform: none;}
+  .hero { padding-top: 140px; padding-bottom: 40px; }
+  .hero-title { 
+    font-size: 42px; 
+    line-height: 1.1;
+    text-shadow: 2px 2px 0px var(--accent-pink); 
+  }
+  .hero-subtitle { font-size: 16px; margin-bottom: 16px; }
+  .hero-roles { font-size: 20px; min-height: 30px; }
+
+  /* Navbar Adjustments */
+  .navbar { 
+    width: 92%; 
+    padding: 12px 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+  }
+  .logo { font-size: 20px; margin-bottom: 5px; }
+  .nav-links { 
+    width: 100%; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+  }
+  .nav-links a { font-size: 12px; padding: 6px 12px; }
+
+  /* Bento adjustments */
+  .section-padding { padding: 40px 0; }
+  .section-title { font-size: 28px; }
+  
+  .bento-container { gap: 20px; }
   .bento-card { padding: 20px; }
+  
+  .about-card h3 { font-size: 26px !important; }
+  .skills-card h3 { font-size: 26px !important; }
+  
+  .card-img-wrap { height: 180px; }
+  
+  .contact-card { padding: 24px; }
+  .contact-card h2 { font-size: 28px; }
+  
+  .brutal-submit { font-size: 20px; padding: 12px 20px; width: 100%; box-sizing: border-box; }
+  
+  /* Marquee */
+  .marquee-content { font-size: 20px; }
+  .marquee-content span { padding: 0 20px; }
+  .marquee-content span::after { margin-left: 40px; }
+  .marquee-container { margin-bottom: 50px; }
+
+  /* Footer */
+  .footer-brand h3 { font-size: 28px; }
+  .footer-socials { flex-wrap: wrap; gap: 10px; padding: 0 10px; justify-content: center; }
+  .footer-socials a { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 34px; }
+  .hero-roles { font-size: 16px; }
+  .sticker { font-size: 40px; }
+  .sticker.one { left: 5%; top: 0; }
+  .sticker.two { right: 5%; bottom: 0; }
+  
+  .container { padding: 0 16px; }
+  
+  .bento-card { border-width: 3px; box-shadow: 4px 4px 0px 0px var(--text-main); }
+  .bento-card:hover { box-shadow: 6px 6px 0px 0px var(--text-main); transform: translate(-2px, -2px); }
+  .bento-card:active { box-shadow: 2px 2px 0px 0px var(--text-main); transform: translate(2px, 2px); }
+
+  .card-img-wrap { height: 150px; }
+  .card-body h3 { font-size: 20px; }
+  
+  .nav-links { gap: 6px; }
+  .nav-links a { font-size: 11px; padding: 5px 10px; }
+  
+  .brutal-input { padding: 10px; border-width: 3px; box-shadow: 3px 3px 0px 0px var(--text-main); }
+  .brutal-input:focus { box-shadow: 5px 5px 0px 0px var(--text-main); }
 }
